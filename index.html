@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Suraj Prompts | AI Image Prompts</title>
+
+<meta name="description" content="Best AI image prompts for ChatGPT & Gemini. Copy and generate stunning images instantly.">
+<meta name="keywords" content="AI prompts, image prompts, ChatGPT prompts, Gemini prompts">
+<meta name="author" content="Suraj Prompts">
+
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+/* BODY */
+body{
+background:#000;
+color:#fff;
+font-family:sans-serif;
+}
+
+/* HEADER */
+header{
+text-align:center;
+font-size:26px;
+font-weight:700;
+margin:20px 0;
+}
+
+/* TOP BUTTON */
+.top-btn{
+display:block;
+margin:15px;
+padding:14px;
+text-align:center;
+border-radius:15px;
+text-decoration:none;
+color:#fff;
+background:linear-gradient(90deg,#00ff87,#00c9ff);
+}
+
+/* SEARCH */
+.search{
+width:90%;
+margin:10px auto;
+display:block;
+padding:12px;
+border-radius:10px;
+border:none;
+}
+
+/* CATEGORY */
+.filter{
+text-align:center;
+margin:10px;
+}
+
+.filter button{
+margin:5px;
+padding:8px 12px;
+border:none;
+border-radius:10px;
+background:#222;
+color:#fff;
+}
+
+/* CARD */
+.card{
+background:#111;
+margin:15px;
+padding:15px;
+border-radius:20px;
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+}
+
+h3{
+text-align:center;
+margin:10px 0;
+}
+
+.btn{
+display:block;
+margin-top:10px;
+padding:12px;
+border-radius:12px;
+text-align:center;
+color:#fff;
+border:none;
+}
+
+.btn-copy{
+background:linear-gradient(90deg,#ff00cc,#3333ff);
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:#888;
+}
+
+</style>
+</head>
+<body>
+  <header>Suraj Prompts</header>
+
+<a class="top-btn" href="https://whatsapp.com/channel/0029Vb8LDSC7z4kcrtFkae2k">
+🔥 Join My WhatsApp Channel
+</a>
+
+<input type="text" class="search" placeholder="Search prompts..." onkeyup="searchPrompt(this.value)">
+
+<div class="filter">
+<button onclick="filter('all')">All</button>
+<button onclick="filter('cinematic')">Cinematic</button>
+<button onclick="filter('anime')">Anime</button>
+<button onclick="filter('realistic')">Realistic</button>
+</div>
+<!-- CARD 1 -->
+<div class="card cinematic">
+<img src="https://via.placeholder.com/500x300">
+
+<h3>Cinematic Portrait</h3>
+
+<p id="p1">
+Ultra realistic cinematic portrait, soft lighting, 4K, DSLR quality, dramatic background
+</p>
+
+<button class="btn btn-copy" onclick="copyText('p1')">Copy Prompt</button>
+</div>
+
+<!-- CARD 2 -->
+<div class="card anime">
+<img src="https://via.placeholder.com/500x300">
+
+<h3>Anime Style</h3>
+
+<p id="p2">
+Anime girl, vibrant colors, soft glow, high detail, studio ghibli style
+</p>
+
+<button class="btn btn-copy" onclick="copyText('p2')">Copy Prompt</button>
+</div>
+
+<!-- CARD 3 -->
+<div class="card realistic">
+<img src="https://via.placeholder.com/500x300">
+
+<h3>Realistic Photo</h3>
+
+<p id="p3">
+Hyper realistic photo, natural skin, DSLR lens, ultra HD, sharp focus
+</p>
+
+<button class="btn btn-copy" onclick="copyText('p3')">Copy Prompt</button>
+</div>
+
+<script>
+
+/* COPY */
+function copyText(id){
+let text=document.getElementById(id).innerText;
+navigator.clipboard.writeText(text);
+alert("Copied!");
+}
+
+/* SEARCH */
+function searchPrompt(value){
+value=value.toLowerCase();
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+card.style.display=card.innerText.toLowerCase().includes(value) ? "block" : "none";
+});
+}
+
+/* FILTER */
+function filter(type){
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+if(type=="all" || card.classList.contains(type)){
+card.style.display="block";
+}else{
+card.style.display="none";
+}
+});
+}
+
+</script>
+
+<footer>
+© 2026 Suraj Prompts
+</footer>
+
+</body>
+</html>
